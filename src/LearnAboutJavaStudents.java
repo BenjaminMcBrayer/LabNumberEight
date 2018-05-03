@@ -16,6 +16,7 @@ public class LearnAboutJavaStudents {
 		String knowMore = null;
 		String playAgain = null;
 		int userNum;
+		
 		System.out.println("Welcome to our Java Class!");
 
 		// Ask for user information; greet user.
@@ -30,7 +31,7 @@ public class LearnAboutJavaStudents {
 			do {
 				String userInput = Validator.getString(scnr,
 						"For \"Dream Job,\" enter \"job.\" For \"Favorite Sports Mascot,\" enter \"mascot.\"");
-					do {
+
 						if (userInput.equalsIgnoreCase("job")) {
 							System.out.println("Dream Job: " + studentJobs[userNum - 1]);
 						} else if (userInput.equalsIgnoreCase("mascot")) {
@@ -38,7 +39,6 @@ public class LearnAboutJavaStudents {
 						} else {
 							System.out.println("That data does not exist. Please try again. Enter \"job\" or \"mascot.\"");
 						} //FIX ME: Make this repeat the if and else if statements above (instead of leaving the loop).
-					} while (userInput.equalsIgnoreCase("job") || userInput.equalsIgnoreCase("mascot"));
 					
 				knowMore = Validator.getString(scnr, "Would you like to know more about " + studentNames[userNum - 1] + "(y/n)?");
 
